@@ -1,0 +1,146 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://buttons/menu_Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Group 2.png" type="Texture" id=2]
+[ext_resource path="res://assets/fundo2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Sair.png" type="Texture" id=4]
+[ext_resource path="res://assets/Recordes.png" type="Texture" id=5]
+[ext_resource path="res://buttons/sound_Button.gd" type="Script" id=6]
+[ext_resource path="res://assets/Novo Jogo.png" type="Texture" id=7]
+[ext_resource path="res://buttons/fundoPreto.tres" type="StyleBox" id=8]
+[ext_resource path="res://assets/imgsound.png" type="Texture" id=9]
+[ext_resource path="res://sounds/button_pressed.wav" type="AudioStream" id=10]
+[ext_resource path="res://sounds/button_focus.wav" type="AudioStream" id=11]
+
+[node name="Menu" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = -1.41418
+margin_top = -1.41422
+margin_right = 1278.59
+margin_bottom = 718.586
+custom_styles/panel = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 640.991, 361.825 )
+scale = Vector2( 1.10926, 0.949406 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="novoJogo" parent="Sprite" instance=ExtResource( 1 )]
+margin_left = -210.208
+margin_top = -104.764
+margin_right = 245.792
+margin_bottom = -14.7636
+focus_neighbour_top = NodePath("../Sound")
+focus_neighbour_bottom = NodePath("../recordes")
+reference_path = "res://scenes/NovoJogo.tscn"
+start_focused = true
+
+[node name="TextureRect" type="TextureRect" parent="Sprite/novoJogo"]
+margin_left = 92.7679
+margin_top = 18.8093
+margin_right = 389.768
+margin_bottom = 83.8093
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button_focus" type="AudioStreamPlayer" parent="Sprite/novoJogo"]
+stream = ExtResource( 11 )
+
+[node name="button_pressed" type="AudioStreamPlayer" parent="Sprite/novoJogo"]
+stream = ExtResource( 10 )
+
+[node name="recordes" parent="Sprite" instance=ExtResource( 1 )]
+margin_left = -212.0
+margin_top = -2.0
+margin_right = 244.0
+margin_bottom = 88.0
+focus_neighbour_top = NodePath("../novoJogo")
+focus_neighbour_bottom = NodePath("../sair")
+reference_path = "res://scenes/Recordes.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="Sprite/recordes"]
+margin_left = 111.194
+margin_top = 15.885
+margin_right = 373.194
+margin_bottom = 70.885
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button_focus" type="AudioStreamPlayer" parent="Sprite/recordes"]
+stream = ExtResource( 11 )
+
+[node name="button_pressed" type="AudioStreamPlayer" parent="Sprite/recordes"]
+stream = ExtResource( 10 )
+
+[node name="sair" parent="Sprite" instance=ExtResource( 1 )]
+margin_left = -215.176
+margin_top = 109.524
+margin_right = 240.824
+margin_bottom = 199.524
+focus_neighbour_top = NodePath("../recordes")
+focus_neighbour_bottom = NodePath("../Sound")
+
+[node name="TextureRect" type="TextureRect" parent="Sprite/sair"]
+margin_left = 174.279
+margin_top = 16.0842
+margin_right = 291.279
+margin_bottom = 71.0842
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button_focus" type="AudioStreamPlayer" parent="Sprite/sair"]
+stream = ExtResource( 11 )
+
+[node name="button_pressed" type="AudioStreamPlayer" parent="Sprite/sair"]
+stream = ExtResource( 10 )
+
+[node name="Sound" parent="Sprite" instance=ExtResource( 1 )]
+anchor_top = -0.00165246
+anchor_bottom = -0.00165246
+margin_left = 488.0
+margin_top = 286.253
+margin_right = 553.0
+margin_bottom = 352.253
+focus_neighbour_top = NodePath("../sair")
+focus_neighbour_bottom = NodePath("../novoJogo")
+script = ExtResource( 6 )
+
+[node name="TextureRect" type="TextureRect" parent="Sprite/Sound"]
+margin_left = -5.36267
+margin_top = 0.669617
+margin_right = 72.6373
+margin_bottom = 72.6696
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button_focus" type="AudioStreamPlayer" parent="Sprite/Sound"]
+stream = ExtResource( 11 )
+
+[node name="button_pressed" type="AudioStreamPlayer" parent="Sprite/Sound"]
+stream = ExtResource( 10 )
+
+[node name="TextureRect" type="TextureRect" parent="Sprite"]
+margin_left = -337.363
+margin_top = -355.228
+margin_right = 393.637
+margin_bottom = -154.228
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

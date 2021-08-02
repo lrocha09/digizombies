@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Lost In The Forest - Doug Maxwell_Media Right Productions.mp3-fab7d44b4a876f663a2f214915f746ac.mp3str"
+
+[deps]
+
+source_file="res://sounds/Lost In The Forest - Doug Maxwell_Media Right Productions.mp3"
+dest_files=[ "res://.import/Lost In The Forest - Doug Maxwell_Media Right Productions.mp3-fab7d44b4a876f663a2f214915f746ac.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

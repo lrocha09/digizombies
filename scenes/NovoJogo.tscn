@@ -1,0 +1,67 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Objetos/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/338.jpg" type="Texture" id=2]
+[ext_resource path="res://Objetos/Path4/Path4.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Pontuação.png" type="Texture" id=4]
+[ext_resource path="res://scripts/testes.gd" type="Script" id=5]
+[ext_resource path="res://Objetos/Path3/Path3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://sounds/Inescapable - Ugonna Onyekwe.mp3" type="AudioStream" id=7]
+[ext_resource path="res://assets/fonts/Roboto-Bold.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Objetos/Path2/Path2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objetos/Path/Path.tscn" type="PackedScene" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 42
+outline_size = 1
+outline_color = Color( 1, 0.94902, 0.94902, 1 )
+font_data = ExtResource( 8 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 637.965, 359.504 )
+scale = Vector2( 0.213268, 0.240014 )
+texture = ExtResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3.36359, 358.946 )
+
+[node name="Pontuação" type="TextureRect" parent="."]
+margin_left = -10.6364
+margin_top = -9.47731
+margin_right = 416.364
+margin_bottom = 117.523
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 245.577
+margin_top = 0.000320435
+margin_right = 479.577
+margin_bottom = 53.0003
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_outline_modulate = Color( 0.435294, 0, 0.211765, 1 )
+text = "9999"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="Zombie1" parent="." instance=ExtResource( 10 )]
+position = Vector2( 186.873, 527.171 )
+
+[node name="Zombie2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 368.65, 498.042 )
+
+[node name="Zombie3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 750.789, 465.119 )
+
+[node name="Zombie4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 940.143, 546.509 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Darkening II.mp3-dee91172c15aacee0e23fed7107bd991.mp3str"
+
+[deps]
+
+source_file="res://sounds/Darkening II.mp3"
+dest_files=[ "res://.import/Darkening II.mp3-dee91172c15aacee0e23fed7107bd991.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

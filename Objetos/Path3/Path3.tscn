@@ -1,0 +1,595 @@
+[gd_scene load_steps=94 format=2]
+
+[ext_resource path="res://assets/Letras/X.png" type="Texture" id=1]
+[ext_resource path="res://assets/Letras/Y.png" type="Texture" id=2]
+[ext_resource path="res://assets/Letras/V.png" type="Texture" id=3]
+[ext_resource path="res://Objetos/Path3/Path3.gd" type="Script" id=4]
+[ext_resource path="res://Objetos/Path3/Area2D3.gd" type="Script" id=5]
+[ext_resource path="res://Objetos/Path3/AnimationPlayer_Letras3.gd" type="Script" id=6]
+[ext_resource path="res://Objetos/Path3/AnimationPlayer3.gd" type="Script" id=7]
+[ext_resource path="res://assets/Zombie3/animation/Run8.png" type="Texture" id=8]
+[ext_resource path="res://assets/Zombie1/animation/Run9.png" type="Texture" id=9]
+[ext_resource path="res://assets/Zombie1/animation/Run1.png" type="Texture" id=10]
+[ext_resource path="res://assets/Zombie1/animation/Run7.png" type="Texture" id=11]
+[ext_resource path="res://assets/Zombie2/animation/Run6.png" type="Texture" id=12]
+[ext_resource path="res://assets/Zombie2/animation/Run5.png" type="Texture" id=13]
+[ext_resource path="res://assets/Zombie2/animation/Run1.png" type="Texture" id=14]
+[ext_resource path="res://assets/Zombie3/animation/Run6.png" type="Texture" id=15]
+[ext_resource path="res://assets/Zombie3/animation/Run3.png" type="Texture" id=16]
+[ext_resource path="res://assets/Zombie3/animation/Run9.png" type="Texture" id=17]
+[ext_resource path="res://assets/Zombie2/animation/Run7.png" type="Texture" id=18]
+[ext_resource path="res://assets/Zombie1/animation/Run5.png" type="Texture" id=19]
+[ext_resource path="res://assets/Zombie2/animation/Run2.png" type="Texture" id=20]
+[ext_resource path="res://assets/Letras/D.png" type="Texture" id=21]
+[ext_resource path="res://assets/Zombie3/animation/Run7.png" type="Texture" id=22]
+[ext_resource path="res://assets/Letras/B.png" type="Texture" id=23]
+[ext_resource path="res://assets/Letras/J.png" type="Texture" id=24]
+[ext_resource path="res://assets/Zombie1/animation/Run4.png" type="Texture" id=25]
+[ext_resource path="res://assets/Zombie1/animation/Run10.png" type="Texture" id=26]
+[ext_resource path="res://assets/Zombie1/animation/Run8.png" type="Texture" id=27]
+[ext_resource path="res://assets/Zombie2/animation/Run10.png" type="Texture" id=28]
+[ext_resource path="res://assets/Zombie1/animation/Run3.png" type="Texture" id=29]
+[ext_resource path="res://assets/Zombie1/animation/Run2.png" type="Texture" id=30]
+[ext_resource path="res://assets/Zombie3/animation/Run1.png" type="Texture" id=31]
+[ext_resource path="res://assets/Zombie3/animation/Run10.png" type="Texture" id=32]
+[ext_resource path="res://assets/Letras/C.png" type="Texture" id=33]
+[ext_resource path="res://assets/Letras/L.png" type="Texture" id=34]
+[ext_resource path="res://assets/Zombie3/animation/Run5.png" type="Texture" id=35]
+[ext_resource path="res://assets/Zombie3/animation/Run4.png" type="Texture" id=36]
+[ext_resource path="res://assets/Zombie2/animation/Run4.png" type="Texture" id=37]
+[ext_resource path="res://assets/Zombie2/animation/Run8.png" type="Texture" id=38]
+[ext_resource path="res://assets/Zombie2/animation/Run9.png" type="Texture" id=39]
+[ext_resource path="res://assets/Zombie1/animation/Run6.png" type="Texture" id=40]
+[ext_resource path="res://assets/Zombie2/animation/Run3.png" type="Texture" id=41]
+[ext_resource path="res://assets/Zombie3/animation/Run2.png" type="Texture" id=42]
+[ext_resource path="res://assets/Letras/A.png" type="Texture" id=43]
+[ext_resource path="res://assets/Letras/K.png" type="Texture" id=44]
+[ext_resource path="res://assets/Letras/G.png" type="Texture" id=45]
+[ext_resource path="res://assets/Letras/F.png" type="Texture" id=46]
+[ext_resource path="res://assets/Letras/H.png" type="Texture" id=47]
+[ext_resource path="res://assets/Letras/I.png" type="Texture" id=48]
+[ext_resource path="res://assets/Letras/E.png" type="Texture" id=49]
+[ext_resource path="res://assets/Letras/W.png" type="Texture" id=50]
+[ext_resource path="res://assets/Letras/O.png" type="Texture" id=51]
+[ext_resource path="res://assets/Letras/R.png" type="Texture" id=52]
+[ext_resource path="res://assets/Letras/P.png" type="Texture" id=53]
+[ext_resource path="res://assets/Letras/S.png" type="Texture" id=54]
+[ext_resource path="res://assets/Letras/Q.png" type="Texture" id=55]
+[ext_resource path="res://assets/Letras/M.png" type="Texture" id=56]
+[ext_resource path="res://assets/Letras/T.png" type="Texture" id=57]
+[ext_resource path="res://assets/Letras/N.png" type="Texture" id=58]
+[ext_resource path="res://assets/Letras/Z.png" type="Texture" id=59]
+[ext_resource path="res://assets/Letras/U.png" type="Texture" id=60]
+[ext_resource path="res://sounds/zombie dead (online-audio-converter.com).wav" type="AudioStream" id=61]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 25 ), ExtResource( 19 ), ExtResource( 40 ), ExtResource( 11 ), ExtResource( 27 ), ExtResource( 9 ), ExtResource( 26 ), ExtResource( 14 ), ExtResource( 20 ), ExtResource( 41 ), ExtResource( 37 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 18 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 28 ), ExtResource( 31 ), ExtResource( 42 ), ExtResource( 16 ), ExtResource( 36 ), ExtResource( 35 ), ExtResource( 15 ), ExtResource( 22 ), ExtResource( 8 ), ExtResource( 17 ), ExtResource( 32 ) ],
+"loop": true,
+"name": "zombie",
+"speed": 30.0
+} ]
+
+[sub_resource type="Animation" id=2]
+resource_name = "zombie3"
+length = 3.0
+loop = true
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite2:frame")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.231, 0.495, 0.759, 1.023, 1.287, 1.584, 1.947, 2.277, 2.541 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "zombie2"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite2:frame")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.26, 0.5, 0.74, 1.01, 1.3, 1.6, 1.97, 2.33, 2.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "zombie3"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite2:frame")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 20, 21, 22, 23, 24, 25, 26, 27, 28, 29 ]
+}
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 31.7136, 58.7029 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 43 ), ExtResource( 23 ), ExtResource( 33 ), ExtResource( 21 ), ExtResource( 49 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 24 ), ExtResource( 44 ), ExtResource( 34 ), ExtResource( 56 ), ExtResource( 58 ), ExtResource( 51 ), ExtResource( 53 ), ExtResource( 55 ), ExtResource( 52 ), ExtResource( 54 ), ExtResource( 57 ), ExtResource( 60 ), ExtResource( 3 ), ExtResource( 50 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 59 ) ],
+"loop": true,
+"name": "Letras",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=7]
+resource_name = "letra_1"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "letra_10"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 9 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "letra_11"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "letra_12"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 11 ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "letra_13"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 12 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "letra_14"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 13 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "letra_15"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 14 ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "letra_16"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 15 ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "letra_17"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 16 ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "letra_18"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 17 ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "letra_19"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 18 ]
+}
+
+[sub_resource type="Animation" id=18]
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "letra_20"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 19 ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "letra_21"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 20 ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "letra_22"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 21 ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "letra_23"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 22 ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "letra_24"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 24 ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "letra_25"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 23 ]
+}
+
+[sub_resource type="Animation" id=25]
+resource_name = "letra_26"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 25 ]
+}
+
+[sub_resource type="Animation" id=26]
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=27]
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+
+[sub_resource type="Animation" id=28]
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+
+[sub_resource type="Animation" id=29]
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+
+[sub_resource type="Animation" id=30]
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+
+[sub_resource type="Animation" id=31]
+resource_name = "letra_8"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+
+[sub_resource type="Animation" id=32]
+resource_name = "letra_9"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 8 ]
+}
+
+[node name="Zombie3" type="Node2D"]
+position = Vector2( 1244.03, 33.9795 )
+script = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="."]
+process_priority = -1
+position = Vector2( -2.49817, 58.7625 )
+rotation = 0.533706
+collision_mask = 2
+script = ExtResource( 5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Area2D"]
+stream = ExtResource( 61 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Area2D"]
+process_priority = -1
+position = Vector2( -18.1796, -31.491 )
+rotation = -0.507891
+scale = Vector2( 0.42871, 0.362166 )
+frames = SubResource( 1 )
+animation = "zombie"
+speed_scale = 10.0
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D"]
+process_priority = -1
+playback_speed = 1.5
+anims/zombie1 = SubResource( 2 )
+anims/zombie2 = SubResource( 3 )
+anims/zombie3 = SubResource( 4 )
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+process_priority = -1
+position = Vector2( -11.9047, -25.7996 )
+rotation = -0.507891
+shape = SubResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Area2D/CollisionShape2D"]
+position = Vector2( 0.428833, -99.0753 )
+rotation = -0.0157081
+scale = Vector2( 0.7, 0.7 )
+frames = SubResource( 6 )
+animation = "Letras"
+
+[node name="AnimationPlayer_Letras" type="AnimationPlayer" parent="Area2D/CollisionShape2D"]
+anims/letra_1 = SubResource( 7 )
+anims/letra_10 = SubResource( 8 )
+anims/letra_11 = SubResource( 9 )
+anims/letra_12 = SubResource( 10 )
+anims/letra_13 = SubResource( 11 )
+anims/letra_14 = SubResource( 12 )
+anims/letra_15 = SubResource( 13 )
+anims/letra_16 = SubResource( 14 )
+anims/letra_17 = SubResource( 15 )
+anims/letra_18 = SubResource( 16 )
+anims/letra_19 = SubResource( 17 )
+anims/letra_2 = SubResource( 18 )
+anims/letra_20 = SubResource( 19 )
+anims/letra_21 = SubResource( 20 )
+anims/letra_22 = SubResource( 21 )
+anims/letra_23 = SubResource( 22 )
+anims/letra_24 = SubResource( 23 )
+anims/letra_25 = SubResource( 24 )
+anims/letra_26 = SubResource( 25 )
+anims/letra_3 = SubResource( 26 )
+anims/letra_4 = SubResource( 27 )
+anims/letra_5 = SubResource( 28 )
+anims/letra_6 = SubResource( 29 )
+anims/letra_7 = SubResource( 30 )
+anims/letra_8 = SubResource( 31 )
+anims/letra_9 = SubResource( 32 )
+script = ExtResource( 6 )
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

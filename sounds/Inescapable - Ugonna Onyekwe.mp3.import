@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Inescapable - Ugonna Onyekwe.mp3-dd2bc8120491b44f6e577dba54f367ef.mp3str"
+
+[deps]
+
+source_file="res://sounds/Inescapable - Ugonna Onyekwe.mp3"
+dest_files=[ "res://.import/Inescapable - Ugonna Onyekwe.mp3-dd2bc8120491b44f6e577dba54f367ef.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

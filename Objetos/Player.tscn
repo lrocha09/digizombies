@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 660.403, 35.5152 )
+
+[node name="Player" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 643.822, 390.156 )
+rotation = 2.99598e-08
+scale = Vector2( 0.994744, 0.0983721 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 642.14, 388.474 )
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -1.33063, 1.25989 )
+shape = SubResource( 1 )
